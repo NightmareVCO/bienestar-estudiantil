@@ -1,0 +1,649 @@
+/*-- Text Font --*/
+/*-- Icon Font --*/
+/*-- All Color --*/
+/* Mobile and iPad Navbar */
+@media only screen and (max-width: 991px) {
+  a.navbar-brand {
+    font-size: 33px;
+    font-weight: 900;
+    color: #ffffff;
+  }
+  a.navbar-brand span {
+    color: #DDB622;
+  }
+  .navbar-area {
+    background-color: linear-gradient(90deg, #186CAF 0%, #01588E 100%);
+    padding-top: 15px;
+    padding-bottom: 15px !important;
+    z-index: 9;
+    padding-bottom: 15px;
+  }
+  .navbar-area.is-sticky {
+    top: -1px;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    position: -webkit-sticky;
+    position: sticky;
+    -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+    background-color: linear-gradient(#186CAF, #01588E);
+  }
+  .navbar-area .dropdown-toggle::after {
+    display: none;
+  }
+  .navbar-area.navbar-top {
+    transform: translateY(0);
+  }
+  .mobile-responsive-nav {
+    display: block;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu {
+    position: relative;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .navbar-brand {
+    font-family: "Roboto", sans-serif;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .style {
+    font-family: "Roboto", sans-serif;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .logo {
+    position: relative;
+    max-width: 145px;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav {
+    margin-top: 55px;
+    background-color: #ffffff;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul {
+    border: none !important;
+    background-color: #ffffff;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a {
+    border-top-color: #e3e3e3;
+    color: #186CAF !important;
+    font-size: 16px !important;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a i {
+    display: none;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+    color: transparent !important;
+    font-size: 0 !important;
+    text-indent: -9999px !important;
+    width: 100%;
+    height: 28px;
+    text-align: right;
+    padding: 11px !important;
+    background: transparent !important;
+    border-left: none !important;
+    border-bottom: none !important;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a.mean-expand::before {
+    content: "\ea29";
+    position: absolute;
+    top: 14px;
+    right: 13px;
+    font-family: boxicons !important;
+    line-height: 1;
+    font-size: 15px;
+    color: #186CAF !important;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a.active {
+    color: #DDB622 !important;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .navbar-nav {
+    box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 0 !important;
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .navbar-nav::-webkit-scrollbar {
+    width: 7px;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .navbar-nav::-webkit-scrollbar-track {
+    background: #f3f3f3;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .navbar-nav::-webkit-scrollbar-thumb {
+    background: #DDB622;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .navbar-nav::-webkit-scrollbar-thumb:hover {
+    background: #186CAF;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container a.meanmenu-reveal {
+    top: 0px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    padding-top: 10px;
+    color: #ffffff;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container a.meanmenu-reveal span {
+    background: #ffffff;
+    height: 4px;
+    margin-top: -6px;
+    border-radius: 0;
+    position: relative;
+    top: 8px;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-bar {
+    background: transparent;
+    position: absolute;
+    z-index: 3;
+    padding: 0;
+  }
+  ul.last-nav {
+    display: block !important;
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+  .mean-nav .d-flex {
+    display: none !important;
+  }
+  .others-option-for-responsive {
+    display: block !important;
+  }
+  .others-option-for-responsive .container .container {
+    right: 0;
+  }
+  .others-option-for-responsive .others-options .search-form {
+    margin-left: 0;
+    width: 100%;
+    margin-right: 10px;
+  }
+  .others-option-for-responsive .dot-menu .inner .circle {
+    background: #ffffff;
+  }
+  .others-option-for-responsive .dot-menu:hover .inner .circle {
+    background-color: #ffffff;
+  }
+  .others-options ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .others-options ul li .form-control {
+    height: 50px;
+    border: none;
+    padding: 20px;
+    position: relative;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    background: rgba(71, 116, 255, 0.1);
+  }
+  .others-options ul li .form-control:focus {
+    box-shadow: unset;
+  }
+  .others-options .nav-btn {
+    display: block;
+    text-align: center;
+    padding-left: 37px;
+  }
+  .others-options .nav-btn i {
+    position: relative;
+    font-size: 23px;
+    left: -2px;
+    top: 5px;
+    color: #DDB622;
+  }
+  .banner-image {
+    text-align: center;
+  }
+  .banner-image img {
+    max-width: 400px;
+  }
+  .banner-content {
+    padding-top: 50px;
+    text-align: center;
+  }
+  .banner-content h1 {
+    line-height: 45px;
+    font-size: 37px;
+    text-align: center;
+    padding-right: 0;
+  }
+  .banner-content p {
+    max-width: unset;
+    padding: 0 15px;
+  }
+  .main-slider {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .main-slider .default-btn-one {
+    margin-bottom: 15px;
+  }
+  .main-slider .swiper-btn-next {
+    width: 40px;
+    height: 40px;
+    line-height: 48px;
+  }
+  .main-slider .swiper-btn-prev {
+    width: 40px;
+    height: 40px;
+    line-height: 48px;
+  }
+  .section-title h2 {
+    font-size: 30px;
+  }
+  .section-title span {
+    font-size: 15px;
+  }
+  .single-aca-card {
+    padding: 18px;
+  }
+  .single-aca-card .title h3 {
+    font-size: 20px;
+  }
+  .campus-content .counter-card h1 {
+    font-size: 28px;
+  }
+  .single-courses-card .courses-content h3 {
+    font-size: 20px;
+  }
+  .single-health-care-card .health-care-content {
+    padding: 20px;
+  }
+  .single-health-care-card .health-care-content h3 {
+    font-size: 20px;
+  }
+  .single-events-card .events-content h3 {
+    font-size: 20px;
+  }
+  .single-podcasts-card .podcast-content h3 {
+    font-size: 20px;
+  }
+  .subscribe-area .top-content h3 {
+    font-size: 24px;
+  }
+  .copyright .copy {
+    text-align: center;
+  }
+  .copyright .social-content {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .hero-area-style2 .banner-content-two {
+    margin-bottom: 60px;
+  }
+  .owl-theme .owl-nav {
+    display: none;
+  }
+  .page-banner-content h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  .paginations ul li {
+    padding-right: 5px;
+  }
+  .courses-details-left-content .courses-card h2 {
+    font-size: 27px;
+  }
+  .courses-details-left-content .courses-card .list ul li .teacher {
+    position: relative;
+    padding-left: 70px;
+    margin-bottom: 30px;
+  }
+  .courses-details-left-content .description .nav-tabs .nav-link {
+    padding: 15px 25px;
+  }
+  .courses-details-left-content .curriculum .curriculum-list {
+    padding: 15px;
+  }
+  .courses-details-left-content .curriculum .curriculum-list ul li {
+    padding-right: 80px;
+  }
+  .courses-details-left-content .comments .single-comments-box {
+    padding-left: 0px;
+    margin-bottom: 70px;
+    margin-top: 40px;
+  }
+  .courses-details-left-content .comments .single-comments-box img {
+    position: unset;
+    margin-top: 40px;
+  }
+  .courses-details-left-content .instructor-image {
+    margin-bottom: 30px;
+  }
+  .courses-details-left-content .single-reviews-card {
+    position: relative;
+    padding: 30px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+  }
+  .courses-details-left-content .single-reviews-card img {
+    position: unset;
+    margin-top: 45px;
+  }
+  .serch-content {
+    padding: 20px;
+  }
+  .page-banner-content {
+    text-align: center;
+  }
+  .error-area {
+    text-align: center;
+  }
+  .error-area .top-content {
+    margin-bottom: 10px;
+  }
+  .error-area .top-content ul {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .error-area .top-content ul li {
+    font-size: 100px;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1;
+    margin-right: 30px;
+    color: #DDB622;
+    font-family: "Source Serif Pro", serif;
+  }
+  .error-area h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .error-area p {
+    margin-bottom: 30px;
+  }
+  .banner-content ul li {
+    padding-right: unset;
+  }
+  .hero-area-style2 .input-box-warp {
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+  }
+  .hero-area-style2 .input-box-warp:before {
+    left: -7px;
+  }
+  .hero-area-style2 .input-box-warp ul li .form-control {
+    margin-bottom: 20px;
+  }
+  .hero-area-style2 .banner-content ul li:first-child {
+    margin-bottom: 10px;
+  }
+  .contacts-form {
+    padding: 20px;
+  }
+  .contacts-form .form-group .form-control {
+    height: 40px;
+  }
+  .contacts-form h3 {
+    font-size: 22px;
+  }
+  .contact-and-address h2 {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 407px) {
+  .banner-image img {
+    max-width: 300px;
+  }
+}
+@media only screen and (min-width: 382px) and (max-width: 991px) {
+  .hero-area-style2 .input-box-warp {
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+  }
+  .hero-area-style2 .input-box-warp:before {
+    left: -7px;
+  }
+  .hero-area-style2 .input-box-warp ul li .form-control {
+    margin-bottom: 20px;
+  }
+  .banner-content ul li {
+    padding-right: 15px !important;
+  }
+  .banner-content ul li:first-child {
+    margin-bottom: unset;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .social-content {
+    text-align: left !important;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  a.navbar-brand {
+    font-size: 33px;
+    font-weight: 900;
+    color: #ffffff;
+  }
+  a.navbar-brand span {
+    color: #DDB622;
+  }
+  .navbar-area {
+    background-color: linear-gradient(#186CAF, #01588E);
+    padding-top: 15px;
+    padding-bottom: 15px !important;
+    z-index: 2;
+  }
+  .navbar-area.is-sticky {
+    top: -1px;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    position: -webkit-sticky;
+    position: sticky;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+    background-color: linear-gradient(#186CAF, #01588E);
+  }
+  .navbar-area .dropdown-toggle::after {
+    display: none;
+  }
+  .navbar-area.navbar-top {
+    transform: translateY(0);
+  }
+  .navbar-area .navbar .others-options {
+    display: none !important;
+  }
+  .navbar-area .navbar .navbar-nav .nav-item a {
+    margin-right: 0;
+  }
+  .mobile-responsive-nav {
+    display: none;
+  }
+  ul.last-nav {
+    display: block !important;
+  }
+  .mean-nav .d-flex {
+    display: none !important;
+  }
+  .others-option-for-responsive {
+    display: block !important;
+  }
+  .others-option-for-responsive .container .container {
+    right: 8px;
+  }
+  .others-option-for-responsive .container .others-options {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .others-option-for-responsive .container .others-options ul {
+    padding: 0;
+  }
+  .others-option-for-responsive .container .others-options .search-form {
+    margin-left: 0;
+    width: 100%;
+    margin-right: 10px;
+  }
+  .others-option-for-responsive .container .dot-menu {
+    right: 18px;
+    bottom: 42px;
+  }
+  .others-option-for-responsive .container .dot-menu .inner .circle {
+    background: #ffffff;
+  }
+  .others-option-for-responsive .container .dot-menu:hover .inner .circle {
+    background-color: #ffffff;
+  }
+  .banner-image img {
+    width: 470px;
+  }
+  .banner-content {
+    padding-top: 100px;
+  }
+  .banner-content h1 {
+    font-size: 55px;
+    line-height: 70px;
+  }
+  .main-slider .swiper-slide {
+    height: 650px;
+  }
+  .main-slider .swiper-btn-next {
+    width: 40px;
+    height: 40px;
+    line-height: 48px;
+  }
+  .main-slider .swiper-btn-prev {
+    width: 40px;
+    height: 40px;
+    line-height: 48px;
+  }
+  .campus-content .counter-card h1 {
+    font-size: 40px;
+  }
+  .hero-area-style2 .input-box-warp {
+    margin-left: unset;
+    margin-right: auto;
+    width: 375px;
+  }
+  .contact-and-address .contact-and-address-content .contact-card {
+    text-align: center;
+    padding: 10px;
+    background-color: #f3f3f3;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .campus-content .counter-card h1 {
+    font-size: 55px;
+  }
+  h3 {
+    font-size: 22px !important;
+  }
+  .desktop-nav .navbar .navbar-nav .nav-item a {
+    margin-right: 0;
+  }
+  .main-slider .swiper-btn-next {
+    width: 40px;
+    height: 40px;
+    line-height: 48px;
+  }
+  .main-slider .swiper-btn-prev {
+    width: 40px;
+    height: 40px;
+    line-height: 48px;
+  }
+  .single-aca-card {
+    padding: 15px;
+  }
+  .single-aca-card .title h3 {
+    font-size: 22px;
+  }
+  .single-health-care-card .health-care-content {
+    padding: 20px;
+  }
+  .single-health-care-card .health-care-content h3 {
+    font-size: 22px;
+  }
+  .single-events-card .events-content h3 {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1670px) {
+  .main-slider .swiper-btn-next {
+    width: 50px;
+    height: 50px;
+    line-height: 58px;
+  }
+  .main-slider .swiper-btn-prev {
+    width: 50px;
+    height: 50px;
+    line-height: 58px;
+  }
+  .banner-content {
+    margin-left: 18px;
+  }
+}
+/*
+Custom Css
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+@media (min-width: 768px) {
+  .card-responsive-image {
+    width: 415px;
+    height: 276px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+@media (max-width: 767px) {
+  .card-responsive-image {
+    width: 516px;
+    height: 276px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+@media (min-width: 992px) {
+  .aside-sticky {
+    position: sticky;
+    top: 140px;
+  }
+}
+/* Extra large (xl) */
+@media (min-width: 1200px) {
+  .carousel-image {
+    max-width: 857px;
+    max-height: 449px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+/* Large (lg) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .carousel-image {
+    max-width: 857px;
+    max-height: 375px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+/* Medium (md) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carousel-image {
+    max-width: 857px;
+    max-height: 425px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+/* Small (sm) */
+@media (min-width: 401px) and (max-width: 767.98px) {
+  .carousel-image {
+    max-width: 857px;
+    max-height: 315px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+/* Extra small (xs) */
+@media (max-width: 400px) {
+  .carousel-image {
+    max-width: 857px;
+    max-height: 213px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

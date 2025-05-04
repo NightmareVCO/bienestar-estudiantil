@@ -1,0 +1,31 @@
+---
+import ActivitiesForHome from '@components/_client/activities/ActivitiesForHome';
+---
+
+<div class="events-area body-color pt-50 pb-100">
+  <div class="container">
+    <div class="section-title pt-5">
+      <h2>Próximas Actividades</h2>
+      <p>
+        La vida estudiantil en la PUCMM está llena de actividades emocionantes y
+        enriquecedoras. Aquí encontrarás un calendario de eventos que no te
+        querrás perderte. Desde conferencias y talleres hasta actividades
+        culturales y deportivas, hay algo para todos los gustos.
+      </p>
+    </div>
+
+    <ActivitiesForHome client:only="react" />
+
+    <div class="more-item text-center">
+      <p>
+        Mira todas las actividades.{" "}
+        <a
+          href="/grupos-estudiantiles/calendario-de-actividades/csti?pagina=1"
+          class="read-more-btn active"
+        >
+          Calendario de Actividades <i class="fa fa-arrow-right"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>

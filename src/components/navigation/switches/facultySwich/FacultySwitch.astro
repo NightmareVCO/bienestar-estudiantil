@@ -1,0 +1,69 @@
+---
+interface Props {
+	campus: 'csd' | 'csti';
+	currentFaculty?: string;
+}
+
+const { campus, currentFaculty } = Astro.props;
+---
+
+<section class="educationist-area">
+  <div class="d-flex flex-column flex-lg-row justify-content-between">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center">
+        <div class="form-group max-w-md mx-auto">
+          <select
+            id="faculty-select"
+            class="form-control form-select default-btn-one"
+            onchange="
+              const selectedUrl = this.value;
+              fetch(selectedUrl)
+                .then(response => response.text())
+                .then(html => {
+                  const parser = new DOMParser();
+                  const doc = parser.parseFromString(html, 'text/html');
+                  const content = doc.querySelector('main') || doc.body;
+                  document.querySelector('main').innerHTML = content.innerHTML;
+                  window.history.pushState({}, '', selectedUrl);
+                })
+                .catch(() => window.location.href = selectedUrl);
+            "
+          >
+            <option
+              value=`/grupos-estudiantiles/asociaciones-clubes-y-comites/${campus}`
+              >Todas las facultades</option
+            >
+
+            <option
+              value={`/grupos-estudiantiles/asociaciones-clubes-y-comites/${campus}/faculty/sociales-humanidades-artes`}
+              selected={currentFaculty === "sociales-humanidades-artes"}
+            >
+              Ciencias Sociales, Humanidades y Artes
+            </option>
+
+            <option
+              value={`/grupos-estudiantiles/asociaciones-clubes-y-comites/${campus}/faculty/economicas-administrativas`}
+              selected={currentFaculty === "economicas-administrativas"}
+            >
+              Ciencias Económicas y Administrativas
+            </option>
+
+            <option
+              value={`/grupos-estudiantiles/asociaciones-clubes-y-comites/${campus}/faculty/ingenieria`}
+              selected={currentFaculty === "ingenieria"}
+            >
+              Ciencias e Ingeniería
+            </option>
+
+            <option
+              value={`/grupos-estudiantiles/asociaciones-clubes-y-comites/${campus}/faculty/salud`}
+              selected={currentFaculty === "salud"}
+            >
+              Ciencias de la Salud
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

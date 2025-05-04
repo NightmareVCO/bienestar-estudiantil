@@ -1,0 +1,68 @@
+---
+import CarouselImage from './CarouselImage.astro';
+
+interface Props {
+	images: string[];
+	isFullWidth?: boolean;
+	isRounded?: boolean;
+}
+
+const { images, isFullWidth = false, isRounded = false } = Astro.props;
+
+const className = isRounded
+	? ' carousel-inner rounded-carousel-inner'
+	: 'carousel-inner';
+---
+
+<section class="container">
+  <div class="d-flex justify-content-center">
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide w-100"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        {
+          images.map((_, index) => (
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to={index}
+              class={index === 0 ? "active" : ""}
+              aria-label={`Slide ${index + 1}`}
+            />
+          ))
+        }
+      </div>
+      <div class={className}>
+        {
+          images.map((image, index) => (
+            <CarouselImage
+              image={image}
+              index={index}
+              isFullWidth={isFullWidth}
+            />
+          ))
+        }
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

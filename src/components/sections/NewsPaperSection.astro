@@ -1,0 +1,26 @@
+---
+import NewsPapers from '@components/_client/NewsPaper';
+---
+
+<div class="students-stories-area pt-100 pb-70 bg-white">
+  <div class="container">
+    <div class="section-title">
+      <h2>Ultimas noticias de La Vida Estudiantil</h2>
+      <p>Noticias traidas de Prensa PUCMM</p>
+    </div>
+    <NewsPapers client:visible />
+    <div class="more-item text-center">
+      <p>
+        Mira todas las noticias de Vida Estudiantil.{" "}
+        <a
+          href="https://prensa.pucmm.edu.do/vida-estudiantil/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="read-more-btn active"
+        >
+          Prensa PUCMM <i class="fa fa-arrow-right"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>

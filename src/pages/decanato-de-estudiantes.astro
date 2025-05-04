@@ -1,0 +1,109 @@
+---
+import Banner from '@components/banner/Banner.astro';
+import Carousel from '@components/carousel/Carousel.astro';
+import DecanatoInfo from '@components/infos/DecanatoInfo.astro';
+import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout
+  title="Decanato de Estudiante | Bienestar Estudiantil"
+  description="Decanato de Estudiantes, todos los servicios y programas de apoyo a los estudiantes de la PUCMM."
+>
+  <Banner
+    title="Decanato de Estudiantes"
+    path="Decanato de Estudiantes"
+    origin="Inicio"
+    originLink="/"
+  />
+
+  <div class="news-details-area pt-5 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="news-details">
+            <div class="news-simple-card">
+              <Carousel
+                images={[
+                  "/images/templates/template-1.jpg",
+                  "/images/templates/template-2.jpg",
+                  "/images/templates/template-3.jpg",
+                  "/images/templates/template-4.jpg",
+                ]}
+              />
+              <div class="text-center">
+                <h2>Decanato de Estudiantes</h2>
+              </div>
+              <p>
+                El estudiante se inserta a la vida académica a través del
+                Decanato de Estudiantes. Éste tiene como función servir de
+                enlace entre los estudiantes y los directivos de la Institución
+                .Se ocupa también de programar y coordinar actividades
+                curriculares y de servicio estudiantil, que ayudan al desarrollo
+                integral del alumno. Organiza actividades formativas,
+                recreativas y culturales para facilitar que la estadía del
+                alumno en la Universidad sea lo más provechosa posible.
+              </p>
+
+              <p>
+                Además, fomenta el desarrollo integral de los estudiantes,
+                canaliza sus inquietudes y colabora con la solución de las
+                situaciones que se presenten, así como también contribuye con el
+                crecimiento, superación y desarrollo del liderazgo estudiantil a
+                través de su participación en las actividades formativas,
+                recreativas y culturales que organiza el Decanato con las
+                asociaciones de estudiantes.
+              </p>
+
+              <iframe
+                width="100%"
+                height="500px"
+                src="https://www.youtube.com/embed/AoHszCHZ5Eo?si=0EYnPNOAzNbHwZlW"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+
+              <p>
+                Los departamentos de Orientación, Deportes, Salud, Arte y
+                Cultura, son dependencias del Decanato de Estudiantes. A través
+                de sus diversas actividades, propicia un ambiente favorable para
+                la integración de los estudiantes a la familia universitaria.
+              </p>
+
+              <p>
+                Su equipo humano está constituido por la Decana de Estudiantes,
+                asistentes, coordinadores y personal de apoyo.
+              </p>
+
+              <h3>Servicios del Decanato de Estudiantes</h3>
+              <p>
+                El Decanato de Estudiantes ofrece una serie de servicios para
+                los estudiantes, en el siguiente video se presentan los
+                servicios que ofrece el Decanato de Estudiantes.
+              </p>
+
+              <iframe
+                width="100%"
+                height="500px"
+                src="https://www.youtube.com/embed/zUskgKTE8Ps?si=bJo8GlYcSjcV5hj9"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+
+              <DecanatoInfo />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <!-- <div class="aside-sticky"> -->
+          <AsideNav />
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

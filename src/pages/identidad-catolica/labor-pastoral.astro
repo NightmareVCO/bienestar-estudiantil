@@ -1,0 +1,122 @@
+---
+import Banner from '@components/banner/Banner.astro';
+import Carousel from '@components/carousel/Carousel.astro';
+import DecanatoInfo from '@components/infos/DecanatoInfo.astro';
+import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout
+  title="Labor Pastoral | Identidad Católica"
+  description="Decanato de Estudiantes, todos los servicios y programas de apoyo a los estudiantes de la PUCMM."
+>
+  <Banner
+    title="Labor Pastoral | Identidad Católica"
+    path="Labor Pastoral"
+    origin="Inicio / Identidad Católica"
+    originLink="/identidad-catolica"
+  />
+
+  <div class="news-details-area pt-5 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="news-details">
+            <div class="news-simple-card">
+              <Carousel
+                images={[
+                  "/images/templates/template-1.jpg",
+                  "/images/templates/template-2.jpg",
+                  "/images/templates/template-3.jpg",
+                  "/images/templates/template-4.jpg",
+                ]}
+              />
+
+              <div class="text-center">
+                <h2>Identidad Católica</h2>
+              </div>
+
+              <p>
+                La Universidad desarrolla una activa labor pastoral desde las
+                parroquias universitarias y a través, también, de los
+                departamentos de Estudios Teológicos y Humanidades.
+              </p>
+
+              <p>
+                En las parroquias universitarias funcionan agrupaciones
+                estudiantiles, de docentes y personal administrativo, que
+                obedecen a diferentes ministerios y que trabajan en labores de
+                formación, de evangelización, de liturgia, de oración, de acción
+                social, entre otros, tanto dentro de los recintos universitarios
+                como en las comunidades externas a las que sirven. Se destaca Ia
+                Pastoral Juvenil Universitaria y sus campamentos.
+              </p>
+
+              <p>
+                Esta presencia cristiana en la comunidad interna y en el entorno
+                de esta Universidad, es desarrollada, esencialmente, a través de
+                las parroquias universitarias Santísima Trinidad y Nuestra
+                Señora de la Anunciación, localizadas en los campus de Santo
+                Domingo y Santiago, respectivamente. Las mismas tienen entre sus
+                propósitos principales:
+              </p>
+
+              <ul class="mx-4">
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Crear y promover todas las estructuras y condiciones necesarias
+                    para que la comunidad sea penetrada cada vez más eficazmente
+                    por el mensaje evangélico y las enseñanzas de la Iglesia.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Mantener y alentar permanentemente la vigilancia y cuidado, orientado
+                    a evitar la incursión de falsas doctrinas sobre el Evangelio.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Promover las acciones pastorales, tanto a nivel personal como
+                    territorial, desarrollando los valores cristianos y procediendo
+                    de acuerdo con lo que manda la Santa Madre Iglesia, tratando
+                    de inculcar en los feligreses control en sus vidas y brindando
+                    a los jóvenes estudiantes de la PUCMM la oportunidad de conocer,
+                    amar y seguir a Jesús de una manera amena, jovial y moderna,
+                    para así promover los valores humanos y cristianos, formando
+                    jóvenes comprometidos con Dios y con la sociedad.
+                  </p>
+                </li>
+              </ul>
+
+              <p>
+                La relación Iglesia-mundo y que ofrece a los estudiantes la
+                oportunidad de tener vivencias de fe, se efectúa a través del
+                Departamento de Estudios Teológicos, cuya misión es colaborar en
+                la difusión del mensaje de Cristo y ser promotor de un ambiente
+                impregnado del espíritu católico y del Evangelio, ayudando, así,
+                a la PUCMM en su misión educativa. Con este Departamento, la
+                Universidad busca entrar en diálogo con las personas concretas -
+                hombres y mujeres, profesores, estudiantes, empleados y con
+                todas las disciplinas que se estudian en la Institución,
+                promoviendo, de este modo, el perfeccionamiento integral de la
+                persona humana.
+              </p>
+
+              <DecanatoInfo />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <!-- <div class="aside-sticky"> -->
+          <AsideNav />
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

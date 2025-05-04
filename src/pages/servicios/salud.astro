@@ -1,0 +1,162 @@
+---
+import Banner from '@components/banner/Banner.astro';
+import Carousel from '@components/carousel/Carousel.astro';
+import DecanatoInfo from '@components/infos/DecanatoInfo.astro';
+import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout
+  title="Salud - Servicios Estudiantiles"
+  description="Decanato de Estudiantes, todos los servicios y programas de apoyo a los estudiantes de la PUCMM."
+>
+  <Banner
+    title="Salud - Servicios Estudiantiles"
+    path="Servicios Estudiantiles / Salud"
+    origin="Inicio"
+    originLink="/"
+  />
+
+  <div class="news-details-area pt-5 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="news-details">
+            <div class="news-simple-card">
+              <Carousel
+                images={[
+                  "/images/templates/template-1.jpg",
+                  "/images/templates/template-2.jpg",
+                  "/images/templates/template-3.jpg",
+                  "/images/templates/template-4.jpg",
+                ]}
+              />
+              <div class="text-center">
+                <h2>Departamento de Salud</h2>
+              </div>
+              <p>
+                El Departamento de Salud de la PUCMM ofrece servicios de
+                atención primaria individualizada, identificando las necesidades
+                de salud que presenta nuestra comunidad universitaria;
+                estableciendo sus prioridades mediante la relación directa con
+                el usuario, su ambiente y su familia. La labor de este
+                Departamento se destaca por los siguientes valores:
+              </p>
+
+              <ul class="mx-4">
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Realización de examen médico general a los estudiantes de nuevo
+                    ingresos con fines de admisión.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Asistencia de emergencia a los estudiantes que así lo requieran
+                    y sirve de enlace con otras instituciones de salud, para referimientos
+                    a especialistas en caso necesario, dando seguimiento a los mismos.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Orientación al estudiante en la utilización de los recursos en
+                    problemas afectivos relacionados con la salud que inciden en
+                    su vida académica.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Educación para la salud individual y grupal.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Expedición y supervisión de las certificaciones médicas utilizadas
+                    como excusa para inasistencia a exámenes, parciales y finales.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Recibe y canaliza los requerimientos del cumplimiento de las
+                    normas de higiene y seguridad, participando en la evaluación
+                    de las instalaciones de las cafeterías universitarias en el aspecto
+                    de higiene general: manipulación de alimentos, disposición de
+                    basura, control de plagas, entre otras.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Dispone de un Sistema de Vigilancia Epidemiológico permanente.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Evaluación médica del personal de nuevo ingreso.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Asistencia integral a los empleados de la Universidad.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Realización de exámenes médicos a todos los solicitantes de Piscina
+                    olímpicas, (clubes, equipo, cursos cortos, cocurriculares, entre
+                    otros), por ser prioritario para la conservación de la salud
+                    y prevención de enfermedades transmisibles de los usuarios.
+                  </p>
+                </li>
+              </ul>
+
+              <p>
+                Su equipo humano está constituido por una encargada, médicos
+                generales, en servicio permanente, un personal auxiliar en
+                enfermería y servicios secretariales.
+              </p>
+
+              <p>
+                <strong
+                  >Los principales servicios de este Departamento son:</strong
+                >
+              </p>
+
+              <div class="campus-content">
+                <!-- <BulletPointRender bulletPoints={healthServicesBulletPoints} /> -->
+              </div>
+
+              TEMPLATE FOR YOUTUBE VIDEO
+
+              <iframe
+                width="100%"
+                height="500px"
+                src="https://www.youtube.com/embed/v5_-WGPm38Q?si=pYil0FUwTqLvINmg"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+
+              <DecanatoInfo />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <!-- <div class="aside-sticky"> -->
+          <AsideNav />
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

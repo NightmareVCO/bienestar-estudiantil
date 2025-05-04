@@ -1,0 +1,24 @@
+---
+interface Props {
+	image: string;
+	index: number;
+	isFullWidth?: boolean;
+}
+
+const { image, index, isFullWidth } = Astro.props;
+
+const className = isFullWidth
+	? 'd-block w-100 mx-auto base-carousel-image'
+	: 'd-block w-100 carousel-image';
+const divClassName = `carousel-item ${index === 0 ? 'active' : ''}`;
+---
+
+<div class={divClassName}>
+  <img
+    src={image}
+    class={className}
+    alt={`Slide ${index + 1}`}
+    loading="lazy"
+    decoding="async"
+  />
+</div>

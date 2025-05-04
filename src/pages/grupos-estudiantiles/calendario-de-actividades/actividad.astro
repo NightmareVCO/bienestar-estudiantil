@@ -1,0 +1,34 @@
+---
+import Activity from '@components/_client/activities/Activity';
+import ActivitiesSideBar from '@components/_client/activities/sidebar/ActivitySideBar';
+import Banner from '@components/banner/Banner.astro';
+import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="Actividad | Bienestar Estudiantil">
+  <Banner
+    title="Actividad"
+    path="Actividad"
+    origin="Grupos Estudiantiles / Calendario de Actividades"
+    originLink="/grupos-estudiantiles/calendario-de-actividades/csti"
+  />
+
+  <div class="news-details-area pt-5 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="news-details">
+            <Activity client:only="react" />
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <!-- <div class="aside-sticky"> -->
+          <ActivitiesSideBar client:only="react" />
+          <AsideNav />
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

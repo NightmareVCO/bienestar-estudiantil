@@ -1,0 +1,26 @@
+---
+import Activities from '@components/_client/activities/Activities';
+import Banner from '@components/banner/Banner.astro';
+import CampusSwitch from '@components/navigation/switches/campusSwitch/CampusSwitch.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="Calendario de Actividades | Bienestar Estudiantil">
+  <Banner
+    title="Calendario de Actividades - Campus Santo Domingo"
+    path="Calendario de Actividades - CSD"
+    origin="Grupos Estudiantiles"
+    originLink="/grupos-estudiantiles"
+  />
+
+  <div
+    class="d-flex justify-content-evenly align-items-center flex-column flex-lg-row gap-4 gap-lg-0 p-5"
+  >
+    <CampusSwitch
+      CSTILink="/grupos-estudiantiles/calendario-de-actividades/csti"
+      CSDLink="/grupos-estudiantiles/calendario-de-actividades/csd"
+      activeCampus="csd"
+    />
+  </div>
+  <Activities client:only="react" />
+</Layout>

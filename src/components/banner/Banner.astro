@@ -1,0 +1,22 @@
+---
+interface Props {
+	title: string;
+	path: string;
+	origin: string;
+	originLink: string;
+}
+
+const { title, path, origin, originLink } = Astro.props;
+---
+
+<div class="page-banner-area">
+  <div class="container">
+    <div class="page-banner-content">
+      <h1>{title}</h1>
+      <ul>
+        <li><a href={originLink}>{origin}</a></li>
+        <li>{path}</li>
+      </ul>
+    </div>
+  </div>
+</div>

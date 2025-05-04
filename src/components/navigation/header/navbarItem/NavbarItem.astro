@@ -1,0 +1,40 @@
+---
+import Self from './NavbarItem.astro';
+
+interface Props {
+	item: {
+		title: string;
+		link?: string;
+		isActive?: boolean;
+		isExternal?: boolean;
+		children?: Array<{
+			title: string;
+			link?: string;
+			isActive?: boolean;
+			isExternal?: boolean;
+		}>;
+	};
+}
+const { item } = Astro.props;
+---
+
+<li class="nav-item">
+  <a
+    href={item.link ?? "#"}
+    class={`nav-link ${item.children ? "dropdown-toggle" : ""} ${item.isActive ? "active" : ""}`}
+    data-bs-toggle={item.children ? "dropdown" : undefined}
+    target={item.isExternal ? "_blank" : undefined}
+    rel={item.isExternal ? "noopener noreferrer" : undefined}
+  >
+    {item.title}
+  </a>
+  {
+    item.children && (
+      <ul class="dropdown-menu">
+        {item.children.map((child) => (
+          <Self item={child} />
+        ))}
+      </ul>
+    )
+  }
+</li>

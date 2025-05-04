@@ -1,0 +1,23 @@
+---
+import ActivitySection from '@components/sections/ActivitySection.astro';
+import ExploreSection from '@components/sections/ExploreSection.astro';
+import NewsPaperSection from '@components/sections/NewsPaperSection.astro';
+import OverviewSection from '@components/sections/OverviewSection.astro';
+import PucmmTvSection from '@components/sections/PucmmTvSection.astro';
+import VideoSection from '@components/sections/VideoSection.astro';
+import HeroSlider from '@components/slider/HeroSlider.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout
+	title="Bienestar Estudiantil | PUCMM"
+	description="Bienestar Estudiantil, todos los servicios y programas de apoyo a los estudiantes de la PUCMM."
+>
+	<HeroSlider />
+	<OverviewSection />
+	<VideoSection />
+	<ExploreSection />
+	<ActivitySection />
+	<NewsPaperSection />
+	<PucmmTvSection />
+</Layout>

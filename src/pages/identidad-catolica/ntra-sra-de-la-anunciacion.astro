@@ -1,0 +1,220 @@
+---
+import Banner from '@components/banner/Banner.astro';
+import Carousel from '@components/carousel/Carousel.astro';
+import DecanatoInfo from '@components/infos/DecanatoInfo.astro';
+import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout
+  title="Nuestra Señora de la Anunciación | Identidad Católica"
+  description="Decanato de Estudiantes, todos los servicios y programas de apoyo a los estudiantes de la PUCMM."
+>
+  <Banner
+    title="Calendario de Actividades | Identidad Católica"
+    path="Nuestra Señora de la Anunciación"
+    origin="Inicio / Identidad Católica"
+    originLink="/identidad-catolica"
+  />
+
+  <div class="news-details-area pt-5 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="news-details">
+            <div class="news-simple-card">
+              <Carousel
+                images={[
+                  "/images/templates/template-1.jpg",
+                  "/images/templates/template-2.jpg",
+                  "/images/templates/template-3.jpg",
+                  "/images/templates/template-4.jpg",
+                ]}
+              />
+
+              <div class="text-center">
+                <h2>Horario de actividades</h2>
+              </div>
+
+              <h3>Parroquia Nuestra Señora de la Anunciación</h3>
+
+              <ul>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-minus"></i>
+                    <strong>Misas:</strong>
+                  </p>
+                  <ul class="mx-2">
+                    <li>
+                      <spam>Lunes a viernes: 5:30 p. m.</spam>
+                    </li>
+                    <li>
+                      <p>Domingos: 11:00 a. m.</p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-minus"></i>
+                    <strong
+                      >Adoración al Santísimo - Adoradores del Sagrado Corazón
+                      de Jesús:</strong
+                    >
+                  </p>
+                  <ul class="mx-2">
+                    <li>
+                      <spam>
+                        Viernes 1ro. de cada mes: 10:00 a. m., termina con la
+                        Eucaristía, a las 11:00 a. m.
+                      </spam>
+                    </li>
+                    <li>
+                      <p>
+                        Adoración personal: lunes a viernes, de 8:00 a. m. a
+                        9:00 p. m.
+                      </p>
+                    </li>
+                  </ul>
+                  <li>
+                    <p>
+                      <i class="fa-solid fa-minus"></i>
+                      <strong>Confesiones:</strong> Lunes a viernes, de 4:00 a 5:30
+                      p. m.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <i class="fa-solid fa-minus"></i>
+                      <strong
+                        >Catequesis para adultos, Bautizos, Matrimonios, Misas
+                        en acción de gracias:</strong
+                      > a solicitud.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <i class="fa-solid fa-minus"></i>
+                      <strong>Visita a los enfermos:</strong> por comunidades, según
+                      las necesidades.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <i class="fa-solid fa-minus"></i>
+                      <strong>Cursillos Pre bautismal:</strong> meses impares del
+                      año.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <i class="fa-solid fa-minus"></i>
+                      <strong>Hermandad de Emaús:</strong>
+                    </p>
+                    <ul class="mx-2">
+                      <li>
+                        <spam
+                          >Caballeros: reuniones el 1er. lunes de cada mes.</spam
+                        >
+                      </li>
+                      <li>
+                        <p>Damas: reuniones el 2do. lunes de cada mes.</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>
+                      <i class="fa-solid fa-minus"></i>
+                      <strong>Ministerio Musical:</strong>todos los jueves, de
+                      7:30 a 9:00 p. m.
+                    </p>
+                  </li>
+                </li>
+              </ul>
+
+              <h3>Capilla Nuestra Señora del Perpetuo Socorro</h3>
+
+              <ul>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-minus"></i>
+                    <strong>Adoración personal:</strong> lunes a viernes, de 8:00
+                    a. m. a 9:00 p. m.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-minus"></i>
+                    <strong
+                      >Pastoral Juvenil Universitaria - Grupo Complemento:</strong
+                    > martes, de 7:00 a 9:00 p. m.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-minus"></i>
+                    <strong
+                      >Pastoral Juvenil Universitaria - Oración Vida en Cristo:</strong
+                    > miércoles, de 7:00 a 9:00 p. m.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-minus"></i>
+                    <strong
+                      >Pastoral Juvenil Universitaria - Evangelización:</strong
+                    > jueves, de 7:00 a 9:00 p. m.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-minus"></i>
+                    <strong
+                      >Pastoral Juvenil Universitaria - Catequesis para niños:</strong
+                    > sábados, de 3:00 a 4:00 p. m.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-minus"></i>
+                    <strong>Misa:</strong> jueves, 8:00 a. m.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-minus"></i>
+                    <strong>Adoración al Santísimo:</strong> jueves, de 8:30 a 10:00
+                    a. m.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-minus"></i>
+                    <strong
+                      >Misa especial - Pastoral Juvenil Universitaria:</strong
+                    > jueves 4to de cada mes, 6:30 p. m. (próximamente)
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-minus"></i>
+                    <strong>Catequesis para niños:</strong> sábados, de 3:00 a 4:00
+                    p. m.
+                  </p>
+                </li>
+              </ul>
+
+              <DecanatoInfo />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <!-- <div class="aside-sticky"> -->
+          <AsideNav />
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

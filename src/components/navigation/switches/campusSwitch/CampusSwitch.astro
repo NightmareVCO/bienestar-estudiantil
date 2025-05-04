@@ -1,0 +1,32 @@
+---
+interface Props {
+	CSTILink: string;
+	CSDLink: string;
+	activeCampus?: 'csti' | 'csd';
+}
+
+const { CSTILink, CSDLink, activeCampus } = Astro.props;
+
+const defaultClassName = 'default-btn-one';
+const activeClassName = 'default-btn-one main-color';
+
+const CSTIButtonClass =
+	activeCampus === 'csti' ? activeClassName : defaultClassName;
+const CSDButtonClass =
+	activeCampus === 'csd' ? activeClassName : defaultClassName;
+---
+
+<section class="educationist-area">
+  <div class="d-flex flex-column flex-lg-row justify-content-between">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center gap-4">
+        <a href={CSTILink} class={CSTIButtonClass} style="min-width: 277px;">
+          <i class="fa-solid fa-home"></i>Santiago</a
+        >
+        <a href={CSDLink} class={CSDButtonClass} style="min-width: 277px;">
+          <i class="fa-solid fa-home"></i>Santo Domingo</a
+        >
+      </div>
+    </div>
+  </div>
+</section>

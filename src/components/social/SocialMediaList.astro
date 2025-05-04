@@ -1,0 +1,55 @@
+---
+interface Props {
+	facebook?: string;
+	twitter?: string;
+	instagram?: string;
+	linkedin?: string;
+}
+
+const { facebook, twitter, instagram, linkedin } = Astro.props;
+---
+
+<div class="tags-and-share">
+  <div class="row align-items-center">
+    <div class="share">
+      <ul>
+        {
+          facebook && (
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href={facebook}>
+                <i class="flaticon-facebook" />
+              </a>
+            </li>
+          )
+        }
+        {
+          twitter && (
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href={twitter}>
+                <i class="flaticon-twitter" />
+              </a>
+            </li>
+          )
+        }
+        {
+          instagram && (
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href={instagram}>
+                <i class="flaticon-instagram" />
+              </a>
+            </li>
+          )
+        }
+        {
+          linkedin && (
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href={linkedin}>
+                <i class="flaticon-linkedin" />
+              </a>
+            </li>
+          )
+        }
+      </ul>
+    </div>
+  </div>
+</div>

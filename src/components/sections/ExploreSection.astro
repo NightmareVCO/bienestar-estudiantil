@@ -1,0 +1,183 @@
+---
+import Carousel from '@components/carousel/Carousel.astro';
+
+const carouselImages = [
+	'/images/estudiantes/estudiantes-1.webp',
+	'/images/estudiantes/estudiantes-2.webp',
+	'/images/estudiantes/estudiantes-3.webp',
+	'/images/estudiantes/estudiantes-4.webp',
+];
+---
+
+<section class="campus-information-area pb-100">
+  <div class="container">
+    <div class="section-title">
+      <h2>Explora La Vida Estudiantil</h2>
+      <div class="campus-title">
+        <p>
+          En la PUCMM, la vida estudiantil es una parte integral de la
+          experiencia universitaria. Aquí encontrarás información sobre los
+          grupos estudiantiles, servicios, beneficios, eventos, noticias y mucho
+          más.
+        </p>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mt-0 mt-lg-5">
+        <div class="campus-content pr-20">
+          <div class="list">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    <p>Asociaciones, Clubes y Comités</p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    <p>Deportes</p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    <p>Arte & Cultura</p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    <p>Identidad Católica</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    <p>Salud</p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    <p>Seguridad</p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    <p>Consejería</p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    <p>Inclusión</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="counter">
+            <div class="row">
+              <div class="col-lg-4 col-4">
+                <div class="counter-card">
+                  <h2>
+                    <span class="odometer odometer-auto-theme" data-count="60"
+                      ><span class="odometer-inside"
+                        ><span class="odometer-digit"
+                          ><span class="odometer-digit-spacer">6</span><span
+                            class="odometer-digit-inner"
+                            ><span class="odometer-ribbon"
+                              ><span class="odometer-ribbon-inner"
+                                ><span class="odometer-value">0</span></span
+                              ></span
+                            ></span
+                          ></span
+                        ><span class="odometer-digit"
+                          ><span class="odometer-digit-spacer">8</span><span
+                            class="odometer-digit-inner"
+                            ><span class="odometer-ribbon"
+                              ><span class="odometer-ribbon-inner"
+                                ><span class="odometer-value">5</span></span
+                              ></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    >
+                    <span class="target">+</span>
+                  </h2>
+                  <p>Grupos Universitarios</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-4">
+                <div class="counter-card">
+                  <h2>
+                    <span class="odometer odometer-auto-theme" data-count="20"
+                      ><span class="odometer-inside"
+                        ><span class="odometer-digit"
+                          ><span class="odometer-digit-spacer">2</span><span
+                            class="odometer-digit-inner"
+                            ><span class="odometer-ribbon"
+                              ><span class="odometer-ribbon-inner"
+                                ><span class="odometer-value">0</span></span
+                              ></span
+                            ></span
+                          ></span
+                        ><span class="odometer-digit"
+                          ><span class="odometer-digit-spacer">8</span><span
+                            class="odometer-digit-inner"
+                            ><span class="odometer-ribbon"
+                              ><span class="odometer-ribbon-inner"
+                                ><span class="odometer-value">0</span></span
+                              ></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    >
+                    <span class="target">+</span>
+                  </h2>
+                  <p>Beneficios</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-4">
+                <div class="counter-card">
+                  <h2>
+                    <span class="odometer odometer-auto-theme" data-count="21"
+                      ><span class="odometer-inside"
+                        ><span class="odometer-digit"
+                          ><span class="odometer-digit-spacer">2</span><span
+                            class="odometer-digit-inner"
+                            ><span class="odometer-ribbon"
+                              ><span class="odometer-ribbon-inner"
+                                ><span class="odometer-value">1</span></span
+                              ></span
+                            ></span
+                          ></span
+                        ><span class="odometer-digit"
+                          ><span class="odometer-digit-spacer">8</span><span
+                            class="odometer-digit-inner"
+                            ><span class="odometer-ribbon"
+                              ><span class="odometer-ribbon-inner"
+                                ><span class="odometer-value">2</span></span
+                              ></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    >
+                    <span class="target">+</span>
+                  </h2>
+                  <p>Servicios</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <Carousel images={carouselImages} isRounded />
+      </div>
+    </div>
+    <div class="d-flex justify-content-center mt-5">
+      <a
+        href="/grupos-estudiantiles/asociaciones-clubes-y-comites/csti"
+        class="default-btn-one"
+        >Explora Los Grupos Académicos<i class="fa-solid fa-arrow-right"></i></a
+      >
+    </div>
+  </div>
+</section>

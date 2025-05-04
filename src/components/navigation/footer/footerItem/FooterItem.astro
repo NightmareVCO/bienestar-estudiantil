@@ -1,0 +1,31 @@
+---
+interface Props {
+	amountOfItems: number;
+	item: {
+		title: string;
+		links: { text: string; url: string }[];
+	};
+	index: number;
+}
+
+const { amountOfItems, item, index } = Astro.props;
+---
+
+<div
+  class={`col-sm-6 ${index === amountOfItems - 1 ? "col-lg-2" : "col-lg-3"}`}
+>
+  <div class="footer-widjet">
+    <h3>{item.title}</h3>
+    <div class="list">
+      <ul>
+        {
+          item.links.map((link) => (
+            <li>
+              <a href={link.url}>{link.text}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>

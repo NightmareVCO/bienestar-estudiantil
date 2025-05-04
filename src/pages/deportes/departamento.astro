@@ -1,0 +1,162 @@
+---
+import Banner from '@components/banner/Banner.astro';
+import Carousel from '@components/carousel/Carousel.astro';
+import DecanatoInfo from '@components/infos/DecanatoInfo.astro';
+import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
+import Layout from '@layouts/Layout.astro';
+
+export const accordionData = [
+	{
+		title: 'Atletismo',
+		content:
+			'El atletismo es un deporte que combina velocidad, resistencia y agilidad. En la PUCMM, el equipo de atletismo se destaca por su dedicación y compromiso, participando en competencias locales e internacionales.',
+	},
+	{
+		title: 'Baloncesto',
+		content:
+			'El baloncesto es uno de los deportes más populares en la PUCMM. El equipo de baloncesto masculino y femenino compite en diversas ligas y torneos, promoviendo el trabajo en equipo y la disciplina.',
+	},
+	{
+		title: 'Balonmano',
+		content:
+			'El balonmano es un deporte dinámico que combina habilidades físicas y tácticas. En la PUCMM, se fomenta la práctica del balonmano a través de entrenamientos regulares y competiciones.',
+	},
+	{
+		title: 'Fútbol',
+		content:
+			'El fútbol es un deporte muy querido en la PUCMM. Los equipos masculino y femenino participan en ligas locales, promoviendo el espíritu deportivo y la camaradería entre los estudiantes.',
+	},
+	{
+		title: 'Natación',
+		content:
+			'La natación es una actividad esencial para el bienestar físico. La PUCMM cuenta con instalaciones adecuadas para la práctica de la natación, ofreciendo clases y entrenamientos para todos los niveles.',
+	},
+	{
+		title: 'Pádel',
+		content:
+			'El pádel es un deporte de raqueta que ha ganado popularidad en la PUCMM. Se ofrecen clases y torneos para fomentar la participación estudiantil.',
+	},
+	{
+		title: 'Tenis',
+		content:
+			'El tenis es un deporte que combina habilidad y estrategia. La PUCMM cuenta con canchas adecuadas para la práctica del tenis, ofreciendo clases y competiciones.',
+	},
+	{
+		title: 'Voleibol',
+		content:
+			'El voleibol es un deporte muy practicado en la PUCMM. Los equipos masculino y femenino participan en ligas locales, promoviendo el trabajo en equipo y la disciplina.',
+	},
+];
+---
+
+<Layout
+  title="Departamento - Educación Física & Deportes"
+  description="Decanato de Estudiantes, todos los servicios y programas de apoyo a los estudiantes de la PUCMM."
+>
+  <Banner
+    title="Departamento - Educación Física & Deportes"
+    path="Educación Física & Deportes / Departamento"
+    origin="Inicio"
+    originLink="/"
+  />
+
+  <div class="news-details-area pt-5 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="news-details">
+            <div class="news-simple-card">
+              <Carousel
+                images={[
+                  "/images/csti/deportes/ajedrez/ajedrez-1.webp",
+                  "/images/csti/deportes/beisbol/beisbol-1.webp",
+                  "/images/csti/deportes/karate/karate-1.webp",
+                  "/images/csti/deportes/natacion/natacion-1.webp",
+                  "/images/csti/deportes/pingpong/pingpong-1.webp",
+                  "/images/csti/deportes/voleibol/voleibol-1.webp",
+                  "/images/csti/deportes/basketbol/basketbol-1.webp",
+                ]}
+              />
+
+              <div class="text-center">
+                <h2>Departamento de Educación Física y Deportes</h2>
+              </div>
+              <p>
+                El Departamento de Educación Física y Deportes tiene como misión
+                contribuir al desarrollo bio-sicosocial de nuestros estudiantes,
+                mediante la organización e implementación de actividades
+                físicas, orientados por las doctrinas del Humanismo Cristiano.
+              </p>
+
+              <p>
+                Su visión es lograr que cada ente asuma de manera automática y
+                espontánea la realización de movimientos a lo largo de su
+                existencia y lograr así un nivel de vida en consonancia con la
+                capacidad de sus potencialidades por el bien propio, de su
+                alrededor y de la patria.
+              </p>
+
+              <iframe
+                width="100%"
+                height="500px"
+                src="https://www.youtube.com/embed/xSzUUMfURZ8?si=Toqgc1lDBtCsATEf"
+                title="Deporte PUCMM"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+
+              <p>
+                Los departamentos de Orientación, Deportes, Salud, Arte y
+                Cultura, son dependencias del Decanato de Estudiantes. A través
+                de sus diversas actividades, propicia un ambiente favorable para
+                la integración de los estudiantes a la familia universitaria.
+              </p>
+
+              <div class="accordion mb-4" id="arts-accordion">
+                {
+                  accordionData.map((item, index) => {
+                    const collapseId = `collapse-${index}`;
+                    return (
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target={`#${collapseId}`}
+                            aria-expanded="false"
+                            aria-controls={collapseId}
+                          >
+                            {item.title}
+                          </button>
+                        </h2>
+                        <div
+                          id={collapseId}
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#arts-accordion"
+                        >
+                          <div class="accordion-body">
+                            <div>{item?.content}</div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })
+                }
+              </div>
+
+              <DecanatoInfo />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <!-- <div class="aside-sticky"> -->
+          <AsideNav />
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

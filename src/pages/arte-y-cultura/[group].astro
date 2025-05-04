@@ -1,0 +1,81 @@
+---
+import Banner from '@components/banner/Banner.astro';
+import Carousel from '@components/carousel/Carousel.astro';
+import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
+import Layout from '@layouts/Layout.astro';
+
+import { type ArtGroupData, artsGroups } from '@static/artsGroups.static';
+
+export async function getStaticPaths() {
+	return artsGroups.map((groupData) => ({
+		params: { group: groupData.group },
+		props: { groupData },
+	}));
+}
+
+interface Props {
+	groupData: ArtGroupData;
+}
+
+const { groupData } = Astro.props;
+---
+
+<Layout
+  title=`${groupData?.title} - Grupos Estudiantiles`
+  description={groupData?.description}
+>
+  <Banner
+    title={groupData?.title}
+    path={groupData?.title}
+    origin=`Arte & Cultura / Grupos`
+    originLink=`/arte-y-cultura/`
+  />
+
+  <div class="news-details-area pt-5 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="news-details">
+            <div class="news-simple-card">
+              <Carousel images={groupData.images} />
+
+              <div class="text-center">
+                <h2>
+                  {groupData?.title}
+                </h2>
+              </div>
+              <div set:html={groupData?.description} />
+
+              {
+                groupData?.formLink && (
+                  <div class="text-center pb-4">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={groupData.formLink}
+                      class="default-btn-one"
+                    >
+                      <i class="flaticon-bookmark" />
+                      Llenar solicitud de ingreso
+                    </a>
+                  </div>
+                )
+              }
+            </div>
+            <!-- <SocialMediaList
+              facebook={groupData.socialMedia?.facebook}
+              instagram={groupData.socialMedia?.instagram}
+              twitter={groupData.socialMedia?.twitter}
+              linkedin={groupData.socialMedia?.linkedin}
+            /> -->
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <!-- <div class="aside-sticky"> -->
+          <AsideNav />
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

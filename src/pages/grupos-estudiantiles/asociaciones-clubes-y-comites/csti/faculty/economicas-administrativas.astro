@@ -1,0 +1,38 @@
+---
+import Banner from '@components/banner/Banner.astro';
+import StudentGroupCard from '@components/cards/StudentGroupCard.astro';
+import CampusSwitch from '@components/navigation/switches/campusSwitch/CampusSwitch.astro';
+import FacultySwitch from '@components/navigation/switches/facultySwich/FacultySwitch.astro';
+import Layout from '@layouts/Layout.astro';
+
+import { onlyFCEAGroupsCSTI } from '@static/studentGroups.static';
+---
+
+<Layout title="Asociaciones, Clubes y Comités - Campus Santiago">
+  <Banner
+    title="Asociaciones, Clubes y Comités - Campus Santiago"
+    path="Asociaciones, Clubes y Comités - CSTI"
+    origin="Grupos Estudiantiles"
+    originLink="/grupos-estudiantiles"
+  />
+
+  <div
+    class="d-flex justify-content-evenly align-items-center flex-column flex-lg-row gap-4 gap-lg-0 p-5"
+  >
+    <CampusSwitch
+      CSTILink="/grupos-estudiantiles/asociaciones-clubes-y-comites/csti/faculty/economicas-administrativas"
+      CSDLink="/grupos-estudiantiles/asociaciones-clubes-y-comites/csd/faculty/economicas-administrativas"
+      activeCampus="csti"
+    />
+
+    <FacultySwitch campus="csti" currentFaculty="economicas-administrativas" />
+  </div>
+
+  <div class="latest-news-area pb-100">
+    <div class="container">
+      <div class="row justify-content-center">
+        {onlyFCEAGroupsCSTI.map((group) => <StudentGroupCard group={group} />)}
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,143 @@
+---
+import Banner from '@components/banner/Banner.astro';
+import Carousel from '@components/carousel/Carousel.astro';
+import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
+import SocialMediaList from '@components/social/SocialMediaList.astro';
+import Layout from '@layouts/Layout.astro';
+
+import { Image } from 'astro:assets';
+import ActivitiesSideBar from '@components/_client/activities/sidebar/ActivitySideBar';
+import { type GroupData, studentsGroups } from '@static/studentGroups.static';
+
+export async function getStaticPaths() {
+	return studentsGroups.map((groupData) => ({
+		params: { group: groupData.group },
+		props: { groupData },
+	}));
+}
+
+interface Props {
+	groupData: GroupData;
+}
+
+const { groupData } = Astro.props;
+---
+
+<Layout
+  title=`${groupData?.title} - Grupos Estudiantiles`
+  description={groupData?.description}
+>
+  <Banner
+    title={groupData?.title}
+    path={groupData?.label}
+    origin=`Grupos Estudiantiles / Asociaciones, Clubes y Comités - ${groupData?.campus.split('-')[1]}`
+    originLink=`/grupos-estudiantiles/asociaciones-clubes-y-comites/${groupData.campusId}`
+  />
+
+  <div class="news-details-area pt-5 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="news-details">
+            <div class="news-simple-card">
+              <!-- <Carousel
+                images={[
+                  "/images/templates/template-1.jpg",
+                  "/images/templates/template-2.jpg",
+                  "/images/templates/template-3.jpg",
+                  "/images/templates/template-4.jpg",
+                ]}
+              /> -->
+
+              <div class="text-center">
+                <Image
+                  src={groupData?.logo}
+                  alt={groupData?.title}
+                  width={450}
+                  height={450}
+                />
+                <h2>
+                  {groupData?.title}
+                </h2>
+              </div>
+              <div set:html={groupData?.description} />
+
+              <div class="theory pt-4">
+                {
+                  groupData?.mission && (
+                    <div class="theory-box">
+                      <h4>Misión</h4>
+                      <p>{groupData.mission}</p>
+                    </div>
+                  )
+                }
+                {
+                  groupData?.vision && (
+                    <div class="theory-box">
+                      <h4>Visión</h4>
+                      <p>{groupData.vision}</p>
+                    </div>
+                  )
+                }
+                {
+                  groupData?.values && (
+                    <div class="theory-box">
+                      <h4>Valores</h4>
+                      <p>{groupData.values}</p>
+                    </div>
+                  )
+                }
+              </div>
+              <div
+                class="d-flex justify-content-evenly flex-column flex-lg-row gap-1 gap-lg-0"
+              >
+                {
+                  groupData?.website && (
+                    <div class="text-center pb-4">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={groupData.website}
+                        class="default-btn-one"
+                      >
+                        <i class="flaticon-right-arrow" />
+                        Visitar pagina web
+                      </a>
+                    </div>
+                  )
+                }
+                {
+                  groupData?.formLink && (
+                    <div class="text-center pb-4">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={groupData.formLink}
+                        class="default-btn-one"
+                      >
+                        <i class="flaticon-bookmark" />
+                        Llenar solicitud de ingreso
+                      </a>
+                    </div>
+                  )
+                }
+              </div>
+              <SocialMediaList
+                facebook={groupData.socialMedia?.facebook}
+                instagram={groupData.socialMedia?.instagram}
+                twitter={groupData.socialMedia?.twitter}
+                linkedin={groupData.socialMedia?.linkedin}
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <!-- <div class="aside-sticky"> -->
+          <ActivitiesSideBar client:only="react" />
+          <AsideNav />
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

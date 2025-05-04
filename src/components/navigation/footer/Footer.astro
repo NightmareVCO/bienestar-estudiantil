@@ -1,0 +1,89 @@
+---
+import { Image } from 'astro:assets';
+import FooterItem from './footerItem/FooterItem.astro';
+
+const footerNavigationData = [
+	{
+		title: 'Grupos Estudiantiles',
+		links: [
+			{ text: 'Grupos Estudiantiles', url: '' },
+			{ text: 'Asociaciones, Clubes y Comités', url: '' },
+			{ text: 'Arte Y Cultura', url: '' },
+			{ text: 'Deportes', url: '' },
+			{ text: 'Calendario De Actividades', url: '' },
+		],
+	},
+	{
+		title: 'Identidad Católica',
+		links: [
+			{ text: 'Identidad Católica', url: '' },
+			{ text: 'Evangelio del Día', url: '' },
+			{ text: 'Labor Pastoral', url: '' },
+			{ text: 'Santísima Trinidad', url: '' },
+			{ text: 'Ntra. Sra. de la Anunciación', url: '' },
+		],
+	},
+	{
+		title: 'Servicios',
+		links: [
+			{ text: 'Seguridad', url: '' },
+			{ text: 'Inclusión', url: '' },
+			{ text: 'Finanzas', url: '' },
+			{ text: 'Compromiso Universitario', url: '' },
+			{ text: 'Beneficios Estudiantiles', url: '' },
+			{ text: 'Movilidad Estudiantil', url: '' },
+		],
+	},
+];
+---
+
+<footer class="footer-area pt-90 pb-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-6">
+        <div class="footer-logo-area">
+          <a href="/">
+            <Image
+              src="/images/logo.webp"
+              class="main-logo"
+              alt="logo"
+              width={1180}
+              height={392}
+            />
+          </a>
+          <p>
+            PUCMM es la primera universidad privada dominicana, sin fines de
+            lucro, fundada en 1962 por el Episcopado Dominicano. Ofrece
+            programas de grado y postgrado.
+          </p>
+          <div class="contact-list">
+            <ul>
+              <li>
+                <a href="tel:(809) 580-1962"> (809) 580-1962 </a>
+              </li>
+              <li>
+                <a href="mailto:info@pucmm.edu.do">
+                  <span
+                    class="__cf_email__"
+                    data-cfemail="85e4e1e8ecebc5f6e4ebf0abe0e1f0"
+                  >
+                    info@pucmm.edu.do
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {
+        footerNavigationData.map((item, index) => (
+          <FooterItem
+            amountOfItems={footerNavigationData.length}
+            item={item}
+            index={index}
+          />
+        ))
+      }
+    </div>
+  </div>
+</footer>

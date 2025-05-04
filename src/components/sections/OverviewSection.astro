@@ -1,0 +1,62 @@
+---
+export const mainCardsData = [
+	{
+		title: 'Misión',
+		description:
+			'La misión del Decanato de Estudiantes es la de promover el desarrollo integral de los estudiantes, a través de la implementación de programas y servicios que contribuyan a su formación académica, personal y social.',
+		icon: 'fa-solid fa-graduation-cap',
+		link: 'educationist-details.html',
+		label: 'Ver más',
+	},
+	{
+		title: 'Visión',
+		description:
+			'Ser un Decanato de Estudiantes que promueva el desarrollo integral de los estudiantes, a través de la implementación de programas y servicios que contribuyan a su formación académica, personal y social.',
+		icon: 'fa-solid fa-user-graduate',
+		link: 'educationist-details.html',
+		label: 'Ver más',
+	},
+	{
+		title: 'Valores',
+		description:
+			'Los valores del Decanato de Estudiantes son la responsabilidad, la honestidad, la solidaridad, la tolerancia, la equidad y la justicia. Estos valores son fundamentales para el desarrollo integral de los estudiantes.',
+		icon: 'fa-solid fa-pen-to-square',
+		link: 'educationist-details.html',
+		label: 'Ver más',
+	},
+];
+---
+
+<section class="educationist-area pt-100">
+  <div class="container">
+    <div class="section-title">
+      <span>PUCMM</span>
+      <h2>Bienestar Estudiantil</h2>
+      <p>
+        Bienvenido a la vida Universitaria de la Pontificia Universidad Católica
+        Madre y Maestra (PUCMM). Aquí encontrarás información sobre los grupos
+        estudiantiles, eventos, noticias y mucho más.
+      </p>
+    </div>
+    <div class="row justify-content-center">
+      {
+        mainCardsData.map((card) => (
+          <div class="col-lg-4 col-md-6">
+            <div class="single-aca-card">
+              <div class="title d-flex align-items-center">
+                <i class={card.icon} />
+                <h3>{card.title}</h3>
+              </div>
+              <p>{card.description}</p>
+              <div class="readmore">
+                <a href={card.link}>
+                  {card.label} <i class="bx bx-right-arrow-alt" />
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

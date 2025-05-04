@@ -1,0 +1,47 @@
+---
+import SocialMediaList from '@components/social/SocialMediaList.astro';
+import type { GroupData } from '@static/studentGroups.static';
+
+interface Props {
+	group: GroupData;
+}
+
+const { group } = Astro.props;
+---
+
+<div class="col-lg-4 col-md-6">
+  <div class="single-news-card">
+    <div class="news-img text-center">
+      <a href={group.path}>
+        <img
+          src={group.logo}
+          alt={group.title}
+          width={250}
+          height={250}
+          decoding="async"
+          loading="lazy"
+        />
+      </a>
+    </div>
+    <div class="news-content">
+      <div class="list">
+        <a href={group.path}>
+          <h3 class="text-center">{group.title}</h3>
+        </a>
+        <p class="text-center">
+          {
+            group.shortDescription && group.shortDescription.length > 200
+              ? `${group.shortDescription.substring(0, 200)}...`
+              : group.shortDescription
+          }
+        </p>
+      </div>
+    </div>
+    <SocialMediaList
+      facebook={group.socialMedia?.facebook}
+      instagram={group.socialMedia?.instagram}
+      twitter={group.socialMedia?.twitter}
+      linkedin={group.socialMedia?.linkedin}
+    />
+  </div>
+</div>

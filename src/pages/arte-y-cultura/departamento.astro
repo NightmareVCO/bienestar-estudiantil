@@ -1,0 +1,145 @@
+---
+import Banner from '@components/banner/Banner.astro';
+import Carousel from '@components/carousel/Carousel.astro';
+import DecanatoInfo from '@components/infos/DecanatoInfo.astro';
+import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
+import Layout from '@layouts/Layout.astro';
+
+export const accordionData = [
+	{
+		title: 'Grupos de Bailes',
+		content:
+			'Es de reconocida popularidad por su calidad y singular mezcla de bailes folklóricos tradicionales, modernos y exóticos. Bailarines que ocupan lugares importantes en las principales compañías de ballet dominicanas han egresado de este programa. Este grupo ha representado a la Universidad en diferentes escenarios del país y del exterior.',
+	},
+	{
+		title: 'Danza Contemporánea',
+		content:
+			'Es una agrupación que ofrece al estudiantado la oportunidad de incursionar en actividades que contribuyan al desarrollo de su sensibilidad artística, en general, y de las manifestaciones de la danza contemporánea, en particular. En este espacio, el trabajo del bailarín trasciende las meras secuencias de movimientos.',
+	},
+	{
+		title: 'Grupo de Teatro',
+		content:
+			'Surge con el objetivo primordial de divulgar los valores culturales de esta rama artística y contribuir con el desarrollo integral del alumnado dentro del marco general de su plan de estudios. Anualmente realiza presentaciones por todo el país y sus integrantes han logrado ganar, en dos ocasiones consecutivas, el 2do. Lugar del Festival Nacional "Emilio Aparicio" que realiza el Ministerio de Cultura.',
+	},
+	{
+		title: 'Grupo Melody',
+		content:
+			'Es uno de los más recientes, de tipo instrumental. Suele ser requerido para la ambientación de actividades sociales y académicas.',
+	},
+	{
+		title: 'Grupo Coral',
+		content:
+			'Es reconocido por su profesionalidad y diversidad en registros vocales que lo hacen efectivo para cualquier ocasión o actividad que se requiera. Es merecedor de gran aprecio en la comunidad universitaria. Interpretan ritmos populares, modernos tradicionales y regionales de este se derivan agrupaciones como grupo músico vocal, música pop, coro litúrgico, cuarteto de cámara y banda de jazz y blues.',
+	},
+	{
+		title: 'Tuna Universitaria',
+		content:
+			'Es la primera y única existente en el país. Se especializa en canciones tradicionales españolas. También interpreta diferentes ritmos populares caribeños. Su traje, típico del Siglo de Oro Español',
+	},
+];
+---
+
+<Layout
+  title="Departamento - Arte & Cultura"
+  description="Decanato de Estudiantes, todos los servicios y programas de apoyo a los estudiantes de la PUCMM."
+>
+  <Banner
+    title="Departamento - Arte & Cultura"
+    path="Arte & Cultura / Departamento"
+    origin="Inicio"
+    originLink="/"
+  />
+
+  <div class="news-details-area pt-5 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="news-details">
+            <div class="news-simple-card">
+              <Carousel
+                images={[
+                  "/images/csti/arte_cultura/bailes/bailes-1.webp",
+                  "/images/csd/arte_cultura/bailes/bailes-2.webp",
+                  "/images/csti/arte_cultura/melody/melody-1.webp",
+                  "/images/csti/arte_cultura/teatro/teatro-1.webp",
+                  "/images/csd/arte_cultura/teatro/teatro-1.webp",
+                  "/images/csti/arte_cultura/tuna/tuna-1.webp",
+                ]}
+              />
+
+              <div class="text-center">
+                <h2>Departamento de Arte y Cultura</h2>
+              </div>
+              <p>
+                El Departamento de Arte y Cultura es una dependencia del
+                Decanato de Estudiantes de la Pontificia Universidad Católica
+                Madre y Maestra. Fundado en 1968, cada semestre realiza
+                actividades dedicadas a la comunidad universitaria y al público:
+                espectáculos, talleres, seminarios, ferias, exposiciones y obras
+                de teatro, que permiten al estudiantado desarrollar su talento
+                mientras fortalece su creatividad, sus habilidades de liderazgo
+                y de trabajo en equipo.
+              </p>
+
+              <iframe
+                width="100%"
+                height="500px"
+                src="https://www.youtube.com/embed/tUpe4SCxgsI?si=78i_B56Z5mZGOEN-"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+
+              <p>
+                En la actualidad cuenta con los siguientes grupos artísticos que
+                son parte de la vida cultural de la universidad:
+              </p>
+
+              <div class="accordion mb-4" id="arts-accordion">
+                {
+                  accordionData.map((item, index) => {
+                    const collapseId = `collapse-${index}`;
+                    return (
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target={`#${collapseId}`}
+                            aria-expanded="false"
+                            aria-controls={collapseId}
+                          >
+                            {item.title}
+                          </button>
+                        </h2>
+                        <div
+                          id={collapseId}
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#arts-accordion"
+                        >
+                          <div class="accordion-body">
+                            <div>{item.content}</div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })
+                }
+              </div>
+
+              <DecanatoInfo />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <!-- <div class="aside-sticky"> -->
+          <AsideNav />
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

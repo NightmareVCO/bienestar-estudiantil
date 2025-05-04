@@ -1,0 +1,12 @@
+---
+import AsideNavItem from '@components/navigation/asideNav/asideNavItem/AsideNavItem.astro';
+import { headerNavigationData } from '@components/navigation/nav.data';
+---
+
+<div class="related-post-area">
+  <h3>Navegación</h3>
+
+  <div class="categories bg-transparent p-0 m-0">
+    <ul>{headerNavigationData.map((item) => <AsideNavItem item={item} />)}</ul>
+  </div>
+</div>

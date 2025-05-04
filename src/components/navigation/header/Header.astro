@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import NavbarItem from '@components/navigation/header/navbarItem/NavbarItem.astro';
+import { headerNavigationData } from '@components/navigation/nav.data';
+---
+
+<header class="navbar-area">
+  <div class="mobile-responsive-nav">
+    <div class="container-fluid">
+      <div class="mobile-responsive-menu">
+        <div class="logo">
+          <a href="/">
+            <Image
+              src="/images/logo.webp"
+              alt="Logo PUCMM"
+              class="main-logo"
+              width={1180}
+              height={392}
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="desktop-nav">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <a class="navbar-brand" href="/">
+        <Image
+          src="/images/logo.webp"
+          alt="Logo PUCMM"
+          class="main-logo"
+          width={1180}
+          height={392}
+        /></a
+      >
+      <div
+        class="collapse navbar-collapse mean-menu"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav mx-auto">
+          {headerNavigationData.map((item) => <NavbarItem item={item} />)}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

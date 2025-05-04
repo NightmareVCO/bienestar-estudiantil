@@ -1,0 +1,103 @@
+---
+import Banner from '@components/banner/Banner.astro';
+import Carousel from '@components/carousel/Carousel.astro';
+import DecanatoInfo from '@components/infos/DecanatoInfo.astro';
+import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout
+  title="Identidad Católica | Bienestar Estudiantil"
+  description="Decanato de Estudiantes, todos los servicios y programas de apoyo a los estudiantes de la PUCMM."
+>
+  <Banner
+    title="Identidad Católica"
+    path="Identidad Católica"
+    origin="Inicio"
+    originLink="/"
+  />
+
+  <div class="news-details-area pt-5 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="news-details">
+            <div class="news-simple-card">
+              <Carousel
+                images={[
+                  "/images/templates/template-1.jpg",
+                  "/images/templates/template-2.jpg",
+                  "/images/templates/template-3.jpg",
+                  "/images/templates/template-4.jpg",
+                ]}
+              />
+
+              <div class="text-center">
+                <h2>Identidad Católica</h2>
+              </div>
+
+              <p>
+                En su condición de Universidad Católica y Pontificia, la PUCMM
+                tiene el compromiso de impregnar su ambiente
+                académico-administrativo y su entorno de los principios
+                humanísticos cristianos y profesar con el ejemplo las enseñanzas
+                salvíficas del evangelio.
+              </p>
+
+              <p>
+                El alcance de la función pastoral de las parroquias trasciende
+                el ámbito universitario, ya que, como parte fundamental de la
+                estructura de la Iglesia, su accionar se extiende a las
+                comunidades próximas al campus. Además, existen unidades que
+                tienen la misión de divulgar el mensaje cristiano desde la
+                academia, como son los Departamentos de Estudios Teológicos y
+                Humanidades, entre otras unidades de servicio a la actividad
+                académica.
+              </p>
+
+              <p>
+                Las parroquias universitarias, son centros de espiritualidad que
+                tienen el propósito de promover las acciones pastorales, tanto a
+                nivel personal como territorial, desarrollando los valores
+                cristianos y procediendo de acuerdo con lo que manda la Santa
+                Madre Iglesia, tratando de inculcar en los feligreses control en
+                sus vidas y brindando a los jóvenes estudiantes de la PUCMM la
+                oportunidad de conocer, amar y seguir a Jesús de una manera
+                amena, jovial y moderna, para así promover los valores humanos y
+                cristianos, a fin de formar jóvenes comprometidos con Dios y con
+                la sociedad.
+              </p>
+
+              <p>
+                En efecto, los estudiantes de la Universidad son permanentemente
+                llamados a unirse a la Pastoral Universitaria, como un espacio
+                que le permite vivir la alegría de encontrar un Jesús joven y
+                renovar el espíritu para seguir en su camino, explotar sus
+                talentos y ponerlos al servicio de los demás.
+              </p>
+
+              <div class="d-flex justify-content-center mb-4">
+                <a
+                  href="https://santisimatrinidad.org/"
+                  class="default-btn-one"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Parroquia Universitaria Santísima Trinidad <i
+                    class="fa-solid fa-arrow-right"></i></a
+                >
+              </div>
+
+              <DecanatoInfo />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <!-- <div class="aside-sticky"> -->
+          <AsideNav />
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

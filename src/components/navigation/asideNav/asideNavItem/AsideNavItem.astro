@@ -1,0 +1,52 @@
+---
+import Self from './AsideNavItem.astro';
+
+const ICON_MAP: Record<string, string> = {
+	Inicio: 'fa-solid fa-person',
+	'Arte & Cultura': 'fa-sharp fa-solid fa-music',
+	Deportes: 'fa-solid fa-running',
+	'Grupos Estudiantiles': 'fa-solid fa-users',
+	'Identidad Católica': 'fa-solid fa-plus',
+	Servicios: 'fa-solid fa-cog',
+};
+
+interface NavItem {
+	title: string;
+	link?: string;
+	isActive?: boolean;
+	isExternal?: boolean;
+	children?: NavItem[];
+}
+interface Props {
+	item: NavItem;
+	isChild?: boolean;
+}
+
+const { item, isChild = false } = Astro.props;
+const iconClass = ICON_MAP[item.title] ?? '';
+const hasChildren = Array.isArray(item.children) && item.children.length > 0;
+const className = isChild
+	? 'aside-nav-details aside-nav-details-child'
+	: 'aside-nav-details';
+---
+
+<li>
+  {
+    hasChildren ? (
+      <details class={className}>
+        <summary>
+          {iconClass && <i class={iconClass} />} {item.title}
+        </summary>
+        <ul>
+          {item.children!.map((child) => (
+            <Self item={child} isChild />
+          ))}
+        </ul>
+      </details>
+    ) : (
+      <a href={item.link ?? "#"} class="aside-nav-link">
+        {iconClass && <i class={iconClass} />} {item.title}
+      </a>
+    )
+  }
+</li>

@@ -1,0 +1,169 @@
+---
+import Banner from '@components/banner/Banner.astro';
+import Carousel from '@components/carousel/Carousel.astro';
+import DecanatoInfo from '@components/infos/DecanatoInfo.astro';
+import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout
+  title="Inclusión - Servicios Estudiantiles"
+  description="Decanato de Estudiantes, todos los servicios y programas de apoyo a los estudiantes de la PUCMM."
+>
+  <Banner
+    title="Inclusión - Servicios Estudiantiles"
+    path="Servicios Estudiantiles / Inclusión"
+    origin="Inicio"
+    originLink="/"
+  />
+
+  <div class="news-details-area pt-5 pb-70">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="news-details">
+            <div class="news-simple-card">
+              <div class="text-center">
+                <h2>Departamento de Inclusión</h2>
+              </div>
+              <p>
+                La PUCMM, como institución católica y de servicio a la sociedad,
+                está abierta a todas las personas, por lo que en su proceso de
+                admisión asegura la inclusión educativa de las personas con
+                discapacidad.
+              </p>
+
+              <h3>¿Tienes alguna de estas condiciones?</h3>
+
+              <ul class="mx-4">
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Discapacidad visual (total o parcial)
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Discapacidad física (movilidad reducida, limitaciones físicas
+                    y condiciones médicas)
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Discapacidad auditiva (total o parcial)
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Condiciones de salud mental
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Trastorno del espectro autista
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Trastornos del aprendizaje
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>Déficit de
+                    atención/ inatención o hiperactividad
+                  </p>
+                </li>
+              </ul>
+
+              <p>
+                <strong>
+                  Si tienes algún requerimiento específico de accesibilidad, ya
+                  sea en el ámbito físico o académico, completa el siguiente
+                  formulario:
+                </strong>
+              </p>
+
+              <div class="d-flex justify-content-center mb-4">
+                <a
+                  href="https://pucmm.edu.do/inclusion/Paginas/formulario-solicitud-ajustes-razonables.aspx"
+                  class="default-btn-one"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Formulario para la solicitud de ajustes razonables <i
+                    class="fa-solid fa-arrow-right"></i></a
+                >
+              </div>
+
+              <p>
+                <strong>Para la valoración de los casos escribe a: </strong>
+              </p>
+
+              <div class="d-flex justify-content-center mb-4">
+                <a
+                  href="mailto:serviciosparalainclusion@pucmm.edu.do"
+                  class="default-btn-one"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >serviciosparalainclusion@pucmm.edu.do <i
+                    class="fa-solid fa-arrow-right"></i></a
+                >
+              </div>
+
+              <iframe
+                width="100%"
+                height="500px"
+                src="https://www.youtube.com/embed/IebmtrLejic?si=U-fpoZbtVoT-_yfq"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+
+              <h3>Experiencias de nuestros estudiantes</h3>
+
+              <p>
+                Escucha como nuestros estudiantes viven la inclusión y son
+                capaces de superar cualquier obstáculo.
+              </p>
+
+              <iframe
+                width="100%"
+                height="415px"
+                src="https://www.youtube.com/embed/jsq7HoQr6Fc?si=WTWmMIMu0GEZ7Zef"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+
+              <iframe
+                width="100%"
+                height="415px"
+                src="https://www.youtube.com/embed/uo8cUH8RgZ8?si=MGBXjVrmZoIg1DFo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+
+              <DecanatoInfo />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <!-- <div class="aside-sticky"> -->
+          <AsideNav />
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
