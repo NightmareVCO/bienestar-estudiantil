@@ -42,11 +42,12 @@ export const getActivityIdFromUrl = (): {
 };
 
 export const getGroupSlugFromUrl = (): {
-	groupSlug: string | undefined;
+  groupSlug: string | undefined;
 } => {
-	const groupSlug = window.location.pathname.split('/').pop();
+	// Limpiamos la url para evitar problemas con la barra al final
+  const cleanPath = window.location.pathname.replace(/\/$/, '');
+  const segments = cleanPath.split('/').filter(Boolean);
+  const groupSlug = segments.pop();
 
-	return {
-		groupSlug,
-	};
+  return { groupSlug };
 };
