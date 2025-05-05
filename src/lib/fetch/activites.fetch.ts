@@ -128,7 +128,7 @@ export const getCategoryIdBySlug = async ({
 }): Promise<[number | null, Error | null]> => {
 	try {
 		const response = await fetch(
-			`${PUBLIC_API_URL}categories?slug=${slug}&_embed`,
+			`${PUBLIC_API_URL}categories&slug=${slug}`,
 			{
 				headers: {
 					Authorization: `Basic ${TOKEN}`,
@@ -137,7 +137,7 @@ export const getCategoryIdBySlug = async ({
 			},
 		);
 
-		if (response.status === 404) {
+		if (!response.ok) {
 			return [null, new Error('Category not found')];
 		}
 

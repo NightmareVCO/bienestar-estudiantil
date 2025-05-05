@@ -4,7 +4,7 @@ import React from 'react';
 
 const ACTIVITIES_PER_PAGE = 6;
 
-export default function ActivitiesSideBar({ groupId }: { groupId?: number }) {
+export default function ActivitiesSideBar() {
 	const { activities, loading } = useActivitiesSideBar({
 		amount: ACTIVITIES_PER_PAGE,
 	});
