@@ -13,7 +13,8 @@ export const getCampusIdAndPageBySlug = (): {
 	const urlParams = new URLSearchParams(window.location.search);
 	const currentPage = +(urlParams.get('pagina') ?? '1');
 
-	const campus = window.location.pathname.split('/').pop() ?? '';
+  const cleanPath = window.location.pathname.replace(/\/$/, '');
+  const campus = cleanPath.split('/').pop() ?? '';
 	const isCampusValid = campus === 'csti' || campus === 'csd';
 
 	if (!isCampusValid) {

@@ -1,5 +1,4 @@
 import Loading from '@components/_client/loading/Loading';
-import { truncateText } from '@utils/text.utils';
 import React from 'react';
 import { useActivities } from '../_hooks/hooks';
 
