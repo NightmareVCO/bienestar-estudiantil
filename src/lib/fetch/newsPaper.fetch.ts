@@ -32,7 +32,6 @@ export const getNewsPaper = async (): Promise<
 		}
 
 		const data = await response.json();
-		console.log({ data });
 
 		// @ts-expect-error
 		const newsPapers = data.map((newsPaper) => {
