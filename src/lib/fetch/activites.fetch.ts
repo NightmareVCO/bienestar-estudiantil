@@ -127,15 +127,12 @@ export const getCategoryIdBySlug = async ({
 	slug: string;
 }): Promise<[number | null, Error | null]> => {
 	try {
-		const response = await fetch(
-			`${PUBLIC_API_URL}categories&slug=${slug}`,
-			{
-				headers: {
-					Authorization: `Basic ${TOKEN}`,
-					'Content-Type': 'application/json',
-				},
+		const response = await fetch(`${PUBLIC_API_URL}categories&slug=${slug}`, {
+			headers: {
+				Authorization: `Basic ${TOKEN}`,
+				'Content-Type': 'application/json',
 			},
-		);
+		});
 
 		if (!response.ok) {
 			return [null, new Error('Category not found')];

@@ -13,8 +13,8 @@ export const getCampusIdAndPageBySlug = (): {
 	const urlParams = new URLSearchParams(window.location.search);
 	const currentPage = +(urlParams.get('pagina') ?? '1');
 
-  const cleanPath = window.location.pathname.replace(/\/$/, '');
-  const campus = cleanPath.split('/').pop() ?? '';
+	const cleanPath = window.location.pathname.replace(/\/$/, '');
+	const campus = cleanPath.split('/').pop() ?? '';
 	const isCampusValid = campus === 'csti' || campus === 'csd';
 
 	if (!isCampusValid) {
@@ -43,12 +43,12 @@ export const getActivityIdFromUrl = (): {
 };
 
 export const getGroupSlugFromUrl = (): {
-  groupSlug: string | undefined;
+	groupSlug: string | undefined;
 } => {
 	// Limpiamos la url para evitar problemas con la barra al final
-  const cleanPath = window.location.pathname.replace(/\/$/, '');
-  const segments = cleanPath.split('/').filter(Boolean);
-  const groupSlug = segments.pop();
+	const cleanPath = window.location.pathname.replace(/\/$/, '');
+	const segments = cleanPath.split('/').filter(Boolean);
+	const groupSlug = segments.pop();
 
-  return { groupSlug };
+	return { groupSlug };
 };
