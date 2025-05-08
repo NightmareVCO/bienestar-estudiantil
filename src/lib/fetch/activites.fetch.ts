@@ -22,13 +22,13 @@ export const getActivities = async ({
 	currentPage,
 	amountOfActivitiesToFetch,
 }: {
-	categoryId: number;
+	categoryId?: number;
 	currentPage: number;
 	amountOfActivitiesToFetch: number;
 }): Promise<[Activity[], Error | null]> => {
 	try {
 		const response = await fetch(
-			`${PUBLIC_API_URL}posts&categories=${categoryId}&per_page=${amountOfActivitiesToFetch}&page=${currentPage}&_embed`,
+			`${PUBLIC_API_URL}posts${categoryId ? `&categories=${categoryId}` : ''}&per_page=${amountOfActivitiesToFetch}&page=${currentPage}&_embed`,
 			{
 				headers: {
 					Authorization: `Basic ${TOKEN}`,

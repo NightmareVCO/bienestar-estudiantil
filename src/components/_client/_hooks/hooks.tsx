@@ -77,7 +77,6 @@ export function useActivitiesForHome({ amount }: { amount: number }) {
 		const fetchActivities = async () => {
 			setLoading(true);
 			const [activities, _] = await getActivities({
-				categoryId: Campus.CSTI_CAMPUS_TAG,
 				currentPage: 1,
 				amountOfActivitiesToFetch: amount,
 			});
