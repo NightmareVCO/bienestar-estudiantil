@@ -1,9 +1,9 @@
 ---
-import Banner from '@components/banner/Banner.astro';
-import Carousel from '@components/carousel/Carousel.astro';
-import DecanatoInfo from '@components/infos/DecanatoInfo.astro';
-import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
-import Layout from '@layouts/Layout.astro';
+import Banner from "@components/banner/Banner.astro";
+import Carousel from "@components/carousel/Carousel.astro";
+import DecanatoInfo from "@components/infos/DecanatoInfo.astro";
+import AsideNav from "@components/navigation/asideNav/AsideNav.astro";
+import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout
@@ -43,6 +43,50 @@ import Layout from '@layouts/Layout.astro';
                 Departamento se destaca por los siguientes valores:
               </p>
 
+              <p>
+                Su equipo humano está constituido por una encargada, médicos
+                generales, en servicio permanente, un personal auxiliar en
+                enfermería y servicios secretariales.
+              </p>
+
+              <ul class="mx-4">
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Vocación de servicio
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Respecto a la dignidad humana
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Discreción
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Calidad de la atención
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fa-solid fa-check text-primary"></i>
+                    Trabajo en equipo
+                  </p>
+                </li>
+              </ul>
+
+              <p>
+                <strong
+                  >Los principales servicios de este Departamento son:</strong
+                >
+              </p>
               <ul class="mx-4">
                 <li>
                   <p>
@@ -118,34 +162,6 @@ import Layout from '@layouts/Layout.astro';
                   </p>
                 </li>
               </ul>
-
-              <p>
-                Su equipo humano está constituido por una encargada, médicos
-                generales, en servicio permanente, un personal auxiliar en
-                enfermería y servicios secretariales.
-              </p>
-
-              <p>
-                <strong
-                  >Los principales servicios de este Departamento son:</strong
-                >
-              </p>
-
-              <div class="campus-content">
-                <!-- <BulletPointRender bulletPoints={healthServicesBulletPoints} /> -->
-              </div>
-
-              TEMPLATE FOR YOUTUBE VIDEO
-
-              <iframe
-                width="100%"
-                height="500px"
-                src="https://www.youtube.com/embed/v5_-WGPm38Q?si=pYil0FUwTqLvINmg"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
 
               <DecanatoInfo />
             </div>
