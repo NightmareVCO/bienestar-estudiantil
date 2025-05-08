@@ -866,3 +866,12 @@ Custom Css
     object-position: center;
   }
 }
+
+// Xlarge (xl)
+@media (min-width: 1200px) {
+    .main-slider {
+        .swiper-slide {
+            max-height: 1250px;
+        }
+    }
+}
