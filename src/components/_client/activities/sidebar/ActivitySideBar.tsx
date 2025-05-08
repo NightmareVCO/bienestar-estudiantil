@@ -51,7 +51,7 @@ export default function ActivitiesSideBar() {
 							dangerouslySetInnerHTML={{
 								__html: truncateText({
 									text: activity.content,
-									maxLength: 200,
+									maxLength: 80,
 								}),
 							}}
 						/>

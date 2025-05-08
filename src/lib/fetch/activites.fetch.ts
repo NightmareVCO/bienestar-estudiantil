@@ -95,21 +95,23 @@ export const getActivityById = async ({
 			return [null, new Error('Activity not found')];
 		}
 
-		const data = await response.json();
+		const rawActivity = await response.json();
 
-		const formattedDate = new Date(data.date).toLocaleDateString('es-DO', {
+		const formattedDate = new Date(rawActivity.date).toLocaleDateString('es-DO', {
 			day: '2-digit',
 			month: '2-digit',
 			year: '2-digit',
 		});
 
 		const activity: Activity = {
-			id: data.id,
-			title: data.title.rendered,
-			content: data.content.rendered,
+			id: rawActivity.id,
+			title: rawActivity.title.rendered,
+			content: rawActivity.content.rendered,
 			date: formattedDate,
-			imageUrl: data?._embedded['wp:featuredmedia'][0]?.source_url ?? null,
-			groupId: data?.categories[data.categories.length - 1],
+			imageUrl: rawActivity?._embedded['wp:featuredmedia'][0]?.source_url ?? null,
+			groupId: rawActivity?.categories[rawActivity.categories.length - 1],
+			groupSlugForPage: rawActivity._embedded['wp:term'][0][1].slug,
+			groupName: rawActivity._embedded['wp:term'][0][1].name,
 		};
 
 		return [activity, null];

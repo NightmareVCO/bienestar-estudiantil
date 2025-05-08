@@ -1,23 +1,23 @@
 ---
-import Banner from '@components/banner/Banner.astro';
-import Carousel from '@components/carousel/Carousel.astro';
-import AsideNav from '@components/navigation/asideNav/AsideNav.astro';
-import SocialMediaList from '@components/social/SocialMediaList.astro';
-import Layout from '@layouts/Layout.astro';
+import Banner from "@components/banner/Banner.astro";
+import Carousel from "@components/carousel/Carousel.astro";
+import AsideNav from "@components/navigation/asideNav/AsideNav.astro";
+import SocialMediaList from "@components/social/SocialMediaList.astro";
+import Layout from "@layouts/Layout.astro";
 
-import { Image } from 'astro:assets';
-import ActivitiesSideBar from '@components/_client/activities/sidebar/ActivitySideBar';
-import { type GroupData, studentsGroups } from '@static/studentGroups.static';
+import { Image } from "astro:assets";
+import ActivitiesSideBar from "@components/_client/activities/sidebar/ActivitySideBar";
+import { type GroupData, studentsGroups } from "@static/studentGroups.static";
 
 export async function getStaticPaths() {
-	return studentsGroups.map((groupData) => ({
-		params: { group: groupData.group },
-		props: { groupData },
-	}));
+  return studentsGroups.map((groupData) => ({
+    params: { group: groupData.group },
+    props: { groupData },
+  }));
 }
 
 interface Props {
-	groupData: GroupData;
+  groupData: GroupData;
 }
 
 const { groupData } = Astro.props;
@@ -28,7 +28,7 @@ const { groupData } = Astro.props;
   description={groupData?.description}
 >
   <Banner
-    title={groupData?.title}
+    title={`${groupData?.title} - ${groupData?.campus.split("-")[1]}`}
     path={groupData?.label}
     origin=`Grupos Estudiantiles / Asociaciones, Clubes y Comités - ${groupData?.campus.split('-')[1]}`
     originLink=`/grupos-estudiantiles/asociaciones-clubes-y-comites/${groupData.campusId}`

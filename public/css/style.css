@@ -3292,6 +3292,32 @@ Start Academic Details Style
 /*
 Start Blog Details Style
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+.news-details .news-simple-card {
+  background: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.news-details .news-simple-card-isActive {
+  padding: 0rem;
+}
+.news-details .news-simple-card .news-simple-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.news-details .news-simple-card .news-simple-card-body .news-simple-card-body-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.news-details .news-simple-card .news-simple-card-body .news-simple-card-body-content p {
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
 .news-details .news-simple-card h2 {
   font-size: 36px;
   margin-bottom: 20px;
@@ -3319,6 +3345,47 @@ Start Blog Details Style
 }
 .news-details .news-simple-card .list ul li a {
   color: #186CAF;
+}
+.news-details .news-simple-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 1rem;
+}
+.news-details .news-simple-group-header {
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+.news-details .news-simple-group-header img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+.news-details .news-simple-group-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.news-details .news-simple-group-body .news-simple-group-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news-details .news-simple-group-body .news-simple-group-footer h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+.news-details .news-simple-group-body .news-simple-group-footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #666;
+}
+.news-details .news-simple-group-body .news-simple-group-footer p i {
+  margin-right: 0.5rem;
 }
 .news-details .theory .theory-box {
   padding-left: 30px;
