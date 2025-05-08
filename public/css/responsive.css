@@ -636,7 +636,7 @@ Custom Css
     object-position: center;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 2559px) {
   .main-slider .swiper-slide {
     max-height: 1250px;
   }
