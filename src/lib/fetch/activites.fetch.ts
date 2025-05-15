@@ -97,18 +97,22 @@ export const getActivityById = async ({
 
 		const rawActivity = await response.json();
 
-		const formattedDate = new Date(rawActivity.date).toLocaleDateString('es-DO', {
-			day: '2-digit',
-			month: '2-digit',
-			year: '2-digit',
-		});
+		const formattedDate = new Date(rawActivity.date).toLocaleDateString(
+			'es-DO',
+			{
+				day: '2-digit',
+				month: '2-digit',
+				year: '2-digit',
+			},
+		);
 
 		const activity: Activity = {
 			id: rawActivity.id,
 			title: rawActivity.title.rendered,
 			content: rawActivity.content.rendered,
 			date: formattedDate,
-			imageUrl: rawActivity?._embedded['wp:featuredmedia'][0]?.source_url ?? null,
+			imageUrl:
+				rawActivity?._embedded['wp:featuredmedia'][0]?.source_url ?? null,
 			groupId: rawActivity?.categories[rawActivity.categories.length - 1],
 			groupSlugForPage: rawActivity._embedded['wp:term'][0][1].slug,
 			groupName: rawActivity._embedded['wp:term'][0][1].name,
