@@ -1,15 +1,36 @@
-<!-- Start Hero area -->
+---
+import { Image } from "astro:assets";
+---
+
+<!-- Start Hero area --><!-- <img
+  src="/images/banner.webp"
+  alt="Banner"
+  width="1280"
+  height="720"
+  loading="eager"
+  fetchpriority="high"
+/> -->
 <div class="main-slider">
   <div class="swiper-container home-slider-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"></div>
-      <div class="swiper-slide"></div>
-      <div class="swiper-slide"></div>
+      <div class="swiper-slide">
+        <Image
+          class="slide-image"
+          src="/images/banner.webp"
+          alt="Banner"
+          width="1280"
+          height="720"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="slider-btn">
+          <div class="swiper-btn-next">
+            <i class="flaticon-left-chevron"></i>
+          </div>
+          <div class="swiper-btn-prev"><i class="flaticon-chevron"></i></div>
+        </div>
+      </div>
     </div>
-    <div class="slider-btn">
-      <div class="swiper-btn-next"><i class="flaticon-left-chevron"></i></div>
-      <div class="swiper-btn-prev"><i class="flaticon-chevron"></i></div>
-    </div>
+    <!-- End Hero area -->
   </div>
 </div>
-<!-- End Hero area -->
