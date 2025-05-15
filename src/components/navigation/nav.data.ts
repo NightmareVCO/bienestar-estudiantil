@@ -32,19 +32,23 @@ export const headerNavigationData = [
 				children: [
 					{
 						title: 'Consejería Financiera',
-						link: '/servicios/consejeria-finaciera',
+						link: 'https://www.pucmm.edu.do/financiamiento-educativo/',
+						isExternal: true,
 					},
 					{
 						title: 'Consejería Académica',
-						link: '/servicios/consejeria-academica',
+						link: 'https://orientacion.pucmm.edu.do',
+						isExternal: true,
 					},
 					{
 						title: 'Consejería Personal',
-						link: '/servicios/consejeria-personal',
+						link: 'https://orientacion.pucmm.edu.do',
+						isExternal: true,
 					},
 					{
 						title: 'Consejería Vocacional',
-						link: '/servicios/consejeria-vocacional',
+						link: 'https://orientacion.pucmm.edu.do',
+						isExternal: true,
 					},
 				],
 			},
@@ -61,7 +65,8 @@ export const headerNavigationData = [
 			},
 			{
 				title: 'Movilidad Estudiantil',
-				link: '/servicios/movilidad-estudiantil',
+				link: 'https://internacional.pucmm.edu.do/',
+				isExternal: true,
 			},
 		],
 	},
